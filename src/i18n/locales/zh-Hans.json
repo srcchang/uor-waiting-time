@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "homeTitle": "UOR Waiting Time — 环球奥兰多度假区实时等候时间",
+    "homeDescription": "一站式查看环球奥兰多度假区四座乐园的实时设施等候时间、每周与每月趋势、营业时间、停运信息与餐饮指南。iOS 与 Android 免费下载。",
+    "faqDescription": "关于环球奥兰多度假区等候时间 App「UOR Waiting Time」的常见问题。"
+  },
+  "nav": {
+    "features": "功能",
+    "parks": "乐园",
+    "faq": "常见问题"
+  },
+  "hero": {
+    "badge": "UOR Waiting Time App",
+    "title1": "实时等候时间",
+    "title2": "环球奥兰多度假区",
+    "subtitle": "查看佛罗里达环球影城、冒险岛乐园、史诗宇宙与火山湾的实时等候时间，找出最清闲的日子，规划每一天的乐园行程。",
+    "mockPark": "冒险岛乐园",
+    "mockLive": "实时 · 2 分钟前更新",
+    "mockLabels": [
+      "海格的魔法生物",
+      "迅猛龙过山车",
+      "无敌浩克",
+      "骷髅岛：金刚"
+    ],
+    "mockNote": "所有设施都在同一份列表，按等候时间从长到短排序。",
+    "freeNote": "免费下载 · 无需注册账号 · iOS + Android"
+  },
+  "trust": {
+    "items": [
+      {
+        "value": "4",
+        "label": "主题乐园"
+      },
+      {
+        "value": "5",
+        "label": "支持语言"
+      },
+      {
+        "value": "15 分钟",
+        "label": "数据更新"
+      },
+      {
+        "value": "iOS + Android",
+        "label": "支持平台"
+      }
+    ]
+  },
+  "features": {
+    "sectionTitle": "为什么选择 UOR Waiting Time？",
+    "sectionSubtitle": "按照你真正规划环球奥兰多一日行程的方式打造。",
+    "items": [
+      {
+        "icon": "clock",
+        "title": "实时等候时间",
+        "description": "四座乐园所有设施的实时等候时间，乐园营业期间约每 15 分钟更新一次。"
+      },
+      {
+        "icon": "calendar",
+        "title": "每周与每月趋势",
+        "description": "根据历史数据展示平日与各月份的平均等候时间，帮你挑出最清闲的入园日。"
+      },
+      {
+        "icon": "bell",
+        "title": "营业时间与停运信息",
+        "description": "出发前确认今日营业时间、未来 14 天安排、临时停运与定期维护。"
+      },
+      {
+        "icon": "ticket",
+        "title": "设施、表演与餐饮",
+        "description": "在同一处浏览设施、表演、餐厅与商店，并用搜索与排序快速找到需要的信息。"
+      },
+      {
+        "icon": "chart",
+        "title": "设施统计",
+        "description": "查看每项设施的等候历史、中位数，以及一天中最适合排队的时间段。"
+      },
+      {
+        "icon": "globe",
+        "title": "五种语言",
+        "description": "支持英文、日文、韩文、繁体中文与简体中文，布局会随语言调整。"
+      }
+    ]
+  },
+  "parks": {
+    "sectionTitle": "四座乐园，一个 App",
+    "sectionSubtitle": "不必在 App 之间切换，就能掌握环球奥兰多度假区的每一段等候时间。",
+    "usf": {
+      "name": "佛罗里达环球影城",
+      "description": "以电影制片厂为起点打造的主题乐园：好莱坞、纽约、旧金山、春田市与对角巷。"
+    },
+    "ioa": {
+      "name": "冒险岛乐园",
+      "description": "霍格莫德、侏罗纪公园、漫威超级英雄岛，以及奥兰多数一数二的刺激过山车。"
+    },
+    "epic": {
+      "name": "史诗宇宙",
+      "description": "环球最新乐园，包含超级任天堂世界、驯龙高手伯克岛与黑暗宇宙。"
+    },
+    "volcano": {
+      "name": "火山湾",
+      "description": "拥有克拉卡托水上过山车的热带水上乐园，每一项滑道都能查看等候时间。"
+    }
+  },
+  "faq": {
+    "sectionTitle": "常见问题",
+    "sectionSubtitle": "下一次入园前，快速找到答案。",
+    "pageSubtitle": "关于 UOR Waiting Time App 的常见问题。",
+    "seeAll": "查看所有问题",
+    "items": [
+      {
+        "question": "App 是免费的吗？",
+        "answer": "是。UOR Waiting Time 可免费下载与使用。App 以广告支持运营，因此偶尔会显示横幅广告与全屏广告。"
+      },
+      {
+        "question": "支持哪些乐园？",
+        "answer": "支持环球奥兰多度假区全部四座乐园：佛罗里达环球影城、冒险岛乐园、史诗宇宙与火山湾。"
+      },
+      {
+        "question": "支持哪些语言？",
+        "answer": "支持英文、日文、韩文、繁体中文与简体中文。"
+      },
+      {
+        "question": "数据多久更新一次？",
+        "answer": "乐园营业期间约每 15 分钟更新实时等候时间，大约是奥兰多时间 07:00 至 23:59。乐园休息时数据可能会暂停更新。"
+      },
+      {
+        "question": "需要网络连接吗？",
+        "answer": "需要。实时等候时间、营业时间、停运信息与最新设施信息都需要网络连接。"
+      },
+      {
+        "question": "为什么 App 的等候时间和现场看板不同？",
+        "answer": "等候时间随时都在变化。App 约每 15 分钟更新一次，与入口看板有细微差异是正常的。请把它作为规划路线的参考。"
+      },
+      {
+        "question": "可以查看历史等候趋势吗？",
+        "answer": "可以。每周与每月趋势会显示平日及各月份的平均等候时间，每项设施页面也有等候历史与统计。"
+      },
+      {
+        "question": "App 有表演、餐饮与商店信息吗？",
+        "answer": "有。你可以浏览各乐园的设施、表演、餐厅与商店，并用搜索与排序缩小范围。"
+      },
+      {
+        "question": "如何报告问题或提供反馈？",
+        "answer": "在 App 的设置中选择「意见反馈」发送电子邮件，或直接来信 srcchang@gmail.com。"
+      }
+    ]
+  },
+  "brand": {
+    "title": "规划更好的一天",
+    "description": "出发前先掌握等候时间。UOR Waiting Time 把环球奥兰多的每一座乐园收进同一个安静、快速的界面，让你少花时间犹豫，多花时间玩设施。",
+    "cta": "下载 UOR Waiting Time"
+  },
+  "footer": {
+    "tagline": "UOR Waiting Time App\n环球奥兰多度假区实时等候时间",
+    "legal": "法律信息",
+    "contact": "联系我们",
+    "privacy": "隐私政策",
+    "terms": "使用条款",
+    "copyright": "© 2026 Project SRC. All rights reserved."
+  },
+  "common": {
+    "minutesUnit": " 分钟",
+    "a11y": {
+      "home": "UOR Waiting Time 首页",
+      "menuOpen": "打开菜单",
+      "languageSelect": "选择语言",
+      "themeDark": "切换为深色模式",
+      "themeLight": "切换为浅色模式",
+      "skipToContent": "跳到主要内容",
+      "appStoreLink": "在 App Store 下载（在新标签页打开）",
+      "googlePlayLink": "在 Google Play 获取（在新标签页打开）",
+      "menuClose": "关闭菜单"
+    }
+  },
+  "legal": {
+    "lastUpdated": "最后更新"
+  },
+  "notfound": {
+    "title": "找不到页面",
+    "description": "你要找的页面可能已经移动，或已不存在。",
+    "backHome": "返回首页"
+  }
+}

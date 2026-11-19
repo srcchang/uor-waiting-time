@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "homeTitle": "UOR Waiting Time — Live Wait Times for Universal Orlando Resort",
+    "homeDescription": "Live ride wait times, weekly and monthly trends, park hours, closures, and dining guides for all four Universal Orlando Resort parks. Free on iOS and Android.",
+    "faqDescription": "Everything you need to know about UOR Waiting Time, the independent wait-time app for Universal Orlando Resort."
+  },
+  "nav": {
+    "features": "Features",
+    "parks": "Parks",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "badge": "UOR Waiting Time App",
+    "title1": "Live Wait Times",
+    "title2": "For Universal Orlando",
+    "subtitle": "Check live ride wait times, spot the quietest days, and plan every park day across Universal Studios Florida, Islands of Adventure, Epic Universe, and Volcano Bay.",
+    "mockPark": "Islands of Adventure",
+    "mockLive": "Live · updated 2 min ago",
+    "mockLabels": [
+      "Hagrid's Magical Creatures",
+      "VelociCoaster",
+      "The Incredible Hulk",
+      "Skull Island: Reign of Kong"
+    ],
+    "mockNote": "Every ride in one list, sorted by the longest wait.",
+    "freeNote": "Free download · No account required · iOS + Android"
+  },
+  "trust": {
+    "items": [
+      {
+        "value": "4",
+        "label": "Theme Parks"
+      },
+      {
+        "value": "5",
+        "label": "Languages"
+      },
+      {
+        "value": "15 min",
+        "label": "Data Refresh"
+      },
+      {
+        "value": "iOS + Android",
+        "label": "Platforms"
+      }
+    ]
+  },
+  "features": {
+    "sectionTitle": "Why UOR Waiting Time?",
+    "sectionSubtitle": "Built for the way you actually plan a day at Universal Orlando Resort.",
+    "items": [
+      {
+        "icon": "clock",
+        "title": "Real-Time Wait Times",
+        "description": "Live waits for every attraction across all four parks, refreshed about every 15 minutes while the parks are open."
+      },
+      {
+        "icon": "calendar",
+        "title": "Weekly & Monthly Trends",
+        "description": "See typical waits by weekday and by month, built from historical data, so you can pick the quietest day to visit."
+      },
+      {
+        "icon": "bell",
+        "title": "Park Hours & Closures",
+        "description": "Check today's hours and the next 14 days, plus temporary ride closures and scheduled downtime before you go."
+      },
+      {
+        "icon": "ticket",
+        "title": "Rides, Shows & Dining",
+        "description": "Browse attractions, shows, restaurants, and shops in one place, with search and sorting to find what you need fast."
+      },
+      {
+        "icon": "chart",
+        "title": "Ride Statistics",
+        "description": "Open any ride for its wait history, median waits, and the best time of day to queue."
+      },
+      {
+        "icon": "globe",
+        "title": "Five Languages",
+        "description": "English, Japanese, Korean, Traditional Chinese, and Simplified Chinese, with a layout that adapts to each one."
+      }
+    ]
+  },
+  "parks": {
+    "sectionTitle": "Four Parks, One App",
+    "sectionSubtitle": "Every wait time across Universal Orlando Resort, without switching between apps.",
+    "usf": {
+      "name": "Universal Studios Florida",
+      "description": "The original movie-studio park: Hollywood, New York, San Francisco, Springfield, and Diagon Alley."
+    },
+    "ioa": {
+      "name": "Islands of Adventure",
+      "description": "Hogsmeade, Jurassic Park, Marvel Super Hero Island, and some of the most intense coasters in Orlando."
+    },
+    "epic": {
+      "name": "Epic Universe",
+      "description": "Universal's newest park, with Super Nintendo World, How to Train Your Dragon — Isle of Berk, and Dark Universe."
+    },
+    "volcano": {
+      "name": "Volcano Bay",
+      "description": "A tropical water park with the Krakatau aqua coaster and wait times for every slide and experience."
+    }
+  },
+  "faq": {
+    "sectionTitle": "Frequently Asked Questions",
+    "sectionSubtitle": "Quick answers before your next park day.",
+    "pageSubtitle": "Everything you need to know about the UOR Waiting Time app.",
+    "seeAll": "See all questions",
+    "items": [
+      {
+        "question": "Is the app free?",
+        "answer": "Yes. UOR Waiting Time is free to download and use. The app is supported by ads, so you may see banner and full-screen ads from time to time."
+      },
+      {
+        "question": "Which parks are covered?",
+        "answer": "All four Universal Orlando Resort parks: Universal Studios Florida, Islands of Adventure, Epic Universe, and Volcano Bay."
+      },
+      {
+        "question": "Which languages are supported?",
+        "answer": "The app supports English, Japanese, Korean, Traditional Chinese, and Simplified Chinese."
+      },
+      {
+        "question": "How often is the data updated?",
+        "answer": "Live wait times are refreshed about every 15 minutes while the parks are open, roughly from 7:00 to 23:59 Orlando time. Data may pause when the parks are closed."
+      },
+      {
+        "question": "Do I need an internet connection?",
+        "answer": "Yes. An internet connection is required for live wait times, park hours, closures, and the latest attraction information."
+      },
+      {
+        "question": "Why does the app differ from the wait sign at the ride?",
+        "answer": "Wait times change constantly. The app refreshes about every 15 minutes, so a small difference from the sign at the entrance is normal. Use it as a guide for planning your route."
+      },
+      {
+        "question": "Can I see historical wait trends?",
+        "answer": "Yes. Weekly and monthly trends show typical waits by weekday and by month, and each ride page includes wait history and statistics."
+      },
+      {
+        "question": "Does the app include shows, dining, and shops?",
+        "answer": "Yes. You can browse attractions, shows, restaurants, and shops for each park, with search and sorting to narrow the list."
+      },
+      {
+        "question": "How do I report a problem or send feedback?",
+        "answer": "Open Settings in the app and choose Feedback to send an email, or write to srcchang@gmail.com directly."
+      }
+    ]
+  },
+  "brand": {
+    "title": "Plan a Better Park Day",
+    "description": "Know the waits before you go. UOR Waiting Time keeps every Universal Orlando park in one calm, fast interface, so you can spend less time deciding and more time riding.",
+    "cta": "Download UOR Waiting Time"
+  },
+  "footer": {
+    "tagline": "UOR Waiting Time App\nLive wait times for Universal Orlando Resort",
+    "legal": "Legal",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "copyright": "© 2026 Project SRC. All rights reserved."
+  },
+  "common": {
+    "minutesUnit": " min",
+    "a11y": {
+      "home": "UOR Waiting Time home",
+      "menuOpen": "Open menu",
+      "languageSelect": "Select language",
+      "themeDark": "Switch to dark mode",
+      "themeLight": "Switch to light mode",
+      "skipToContent": "Skip to content",
+      "appStoreLink": "Download on the App Store (opens in a new tab)",
+      "googlePlayLink": "Get it on Google Play (opens in a new tab)",
+      "menuClose": "Close menu"
+    }
+  },
+  "legal": {
+    "lastUpdated": "Last updated"
+  },
+  "notfound": {
+    "title": "Page not found",
+    "description": "The page you are looking for may have moved or no longer exists.",
+    "backHome": "Back to home"
+  }
+}

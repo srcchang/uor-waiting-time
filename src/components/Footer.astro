@@ -1,0 +1,83 @@
+---
+import { APP } from '../config/app';
+import { base } from '../utils/base';
+import { getTranslations, t } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+interface Props {
+  locale: string;
+  currentPath?: string;
+}
+
+const { locale, currentPath = '/' } = Astro.props;
+const tr = getTranslations(locale as Locale);
+---
+
+<footer class="bg-bg-primary text-text-primary">
+  <div class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+    <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+      <div>
+        <div class="mb-3 flex items-center gap-2">
+          <span class="text-xl font-bold">{APP.name}</span>
+        </div>
+        <p class="whitespace-pre-line text-sm text-text-secondary">
+          {t(tr, 'footer.tagline')}
+        </p>
+      </div>
+
+      <div>
+        <h3
+          class="mb-4 text-sm font-semibold tracking-wider text-text-secondary uppercase"
+        >
+          {t(tr, 'footer.legal')}
+        </h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a
+              href={`${base}${locale}/privacy/`}
+              class="text-text-secondary underline-offset-2 transition-colors hover:text-text-primary hover:underline"
+            >
+              {t(tr, 'footer.privacy')}
+            </a>
+          </li>
+          <li>
+            <a
+              href={`${base}${locale}/terms/`}
+              class="text-text-secondary underline-offset-2 transition-colors hover:text-text-primary hover:underline"
+            >
+              {t(tr, 'footer.terms')}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3
+          class="mb-4 text-sm font-semibold tracking-wider text-text-secondary uppercase"
+        >
+          {t(tr, 'footer.contact')}
+        </h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a
+              href={`mailto:${APP.supportEmail}`}
+              class="text-text-secondary underline-offset-2 transition-colors hover:text-text-primary hover:underline"
+            >
+              {APP.supportEmail}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="mt-8 flex flex-col gap-3 border-t border-border-subtle pt-6 sm:flex-row sm:items-center sm:justify-between"
+    >
+      <p class="text-sm text-text-secondary">
+        {t(tr, 'footer.copyright')}
+      </p>
+      <LanguageSwitcher locale={locale} currentPath={currentPath} />
+    </div>
+  </div>
+</footer>

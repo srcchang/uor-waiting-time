@@ -1,0 +1,29 @@
+---
+import { getTranslations, tList } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale as Locale);
+const stats = tList<{ value: string; label: string }>(tr, 'trust.items');
+---
+
+<section class="border-y border-border-subtle bg-bg-surface">
+  <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 gap-y-8 sm:grid-cols-4">
+      {stats.map((stat) => (
+        <div class="flex flex-col items-center text-center">
+          <span
+            class="whitespace-nowrap bg-gradient-to-r from-primary-deep to-primary bg-clip-text text-2xl font-bold text-transparent sm:text-4xl"
+          >
+            {stat.value}
+          </span>
+          <span class="mt-1.5 text-sm text-text-secondary">{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

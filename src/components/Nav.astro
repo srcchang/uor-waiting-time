@@ -1,0 +1,132 @@
+---
+import { Image } from 'astro:assets';
+import { base } from '../utils/base';
+import AppIcon from '../assets/app-icon.png';
+import { APP } from '../config/app';
+import { getTranslations, t } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+import ThemeToggle from './ThemeToggle.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+interface Props {
+  locale: string;
+  currentPath?: string;
+}
+
+const { locale, currentPath = '/' } = Astro.props;
+const tr = getTranslations(locale as Locale);
+const homeHref = `${base}${locale}/`;
+
+const navLinks = [
+  { key: 'nav.features', id: 'features' },
+  { key: 'nav.parks', id: 'parks' },
+  { key: 'nav.faq', id: 'faq' },
+];
+
+function hrefFor(id: string): string {
+  if (currentPath === '/') return `#${id}`;
+  return `${homeHref}#${id}`;
+}
+---
+
+<nav
+  data-nav
+  class="fixed top-0 z-50 w-full border-b border-transparent transition-[background-color,border-color,backdrop-filter] duration-300"
+>
+  <div
+    class="mx-auto flex max-w-[1280px] items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
+  >
+    <a
+      href={homeHref}
+      class="flex shrink-0 items-center gap-2"
+      aria-label={t(tr, 'common.a11y.home')}
+    >
+      <Image
+        src={AppIcon}
+        width={64}
+        height={64}
+        alt=""
+        class="h-8 w-8 rounded-xl"
+      />
+      <span class="text-lg font-bold text-text-primary">{APP.name}</span>
+    </a>
+
+    <div class="hidden items-center gap-1 md:flex">
+      {navLinks.map(({ key, id }) => (
+        <a
+          href={hrefFor(id)}
+          class="rounded-lg px-3 py-3 text-sm font-medium text-text-secondary transition-colors hover:bg-bg-muted hover:text-text-primary"
+        >
+          {t(tr, key)}
+        </a>
+      ))}
+      <LanguageSwitcher locale={locale} currentPath={currentPath} />
+      <ThemeToggle locale={locale} />
+    </div>
+
+    <button
+      data-hamburger
+      data-label-open={t(tr, 'common.a11y.menuOpen')}
+      data-label-close={t(tr, 'common.a11y.menuClose')}
+      aria-label={t(tr, 'common.a11y.menuOpen')}
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      class="flex flex-col items-center justify-center gap-[5px] rounded-lg p-2 transition-colors hover:bg-bg-muted md:hidden"
+    >
+      <span class="h-[2px] w-5 rounded-full bg-text-primary transition-all"></span>
+      <span class="h-[2px] w-5 rounded-full bg-text-primary transition-all"></span>
+      <span class="h-[2px] w-5 rounded-full bg-text-primary transition-all"></span>
+    </button>
+  </div>
+
+  <div
+    id="mobile-menu"
+    data-mobile-menu
+    class="hidden -translate-y-2 transform border-t border-border-subtle bg-bg-surface/95 opacity-0 backdrop-blur-md transition-all duration-200 ease-out md:hidden"
+  >
+    <div class="mx-auto max-w-[1280px] space-y-1 px-4 pt-2 pb-4 sm:px-6">
+      {navLinks.map(({ key, id }) => (
+        <a
+          href={hrefFor(id)}
+          class="block rounded-lg px-3 py-2.5 text-sm font-medium text-text-secondary transition-colors hover:bg-bg-muted hover:text-text-primary"
+        >
+          {t(tr, key)}
+        </a>
+      ))}
+      <div class="flex items-center justify-between pt-2">
+        <LanguageSwitcher locale={locale} currentPath={currentPath} />
+        <ThemeToggle locale={locale} />
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="h-[65px]" data-embed-hide aria-hidden="true"></div>
+
+<style>
+  [data-nav].nav-scrolled {
+    background-color: color-mix(in srgb, var(--color-bg-surface) 82%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-color: var(--color-border-subtle);
+  }
+
+  [data-hamburger][aria-expanded='true'] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  [data-hamburger][aria-expanded='true'] span:nth-child(2) {
+    opacity: 0;
+  }
+  [data-hamburger][aria-expanded='true'] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  [data-nav] a.nav-active {
+    color: var(--color-primary);
+    background-color: var(--color-bg-muted);
+  }
+</style>
+
+<script>
+  import '../scripts/nav';
+</script>

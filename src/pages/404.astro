@@ -1,0 +1,46 @@
+---
+import { base } from '../utils/base';
+import BaseLayout from '../components/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { APP } from '../config/app';
+import { getTranslations, t } from '../i18n/translations';
+import { defaultLocale } from '../i18n/config';
+
+const locale = defaultLocale;
+const tr = getTranslations(locale);
+---
+
+<BaseLayout
+  title={`${t(tr, 'notfound.title')} — ${APP.name}`}
+  description={t(tr, 'notfound.description')}
+  locale={locale}
+  currentPath="/404"
+  noindex
+>
+  <div><Nav locale={locale} currentPath="/404" /></div>
+  <main
+    id="main"
+    tabindex="-1"
+    class="flex min-h-[60vh] flex-col items-center justify-center px-4 py-24 text-center"
+  >
+    <p
+      class="bg-gradient-to-r from-primary-deep to-accent bg-clip-text text-6xl font-bold text-transparent"
+    >
+      404
+    </p>
+    <h1 class="mt-4 text-2xl font-bold text-text-primary sm:text-3xl">
+      {t(tr, 'notfound.title')}
+    </h1>
+    <p class="mt-3 max-w-md text-text-secondary">
+      {t(tr, 'notfound.description')}
+    </p>
+    <a
+      href={`${base}${locale}/`}
+      class="mt-8 inline-flex items-center rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 dark:text-[#071320]"
+    >
+      {t(tr, 'notfound.backHome')}
+    </a>
+  </main>
+  <Footer locale={locale} currentPath="/404" />
+</BaseLayout>

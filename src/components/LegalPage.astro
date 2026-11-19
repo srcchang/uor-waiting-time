@@ -1,0 +1,45 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import Nav from './Nav.astro';
+import Footer from './Footer.astro';
+import { APP } from '../config/app';
+import { getTranslations, t } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+
+interface Props {
+  type: 'privacy' | 'terms';
+  locale: string;
+}
+
+const { type, locale } = Astro.props;
+const tr = getTranslations(locale as Locale);
+const entry = await getEntry('legal', `${locale.toLowerCase()}/${type}`);
+if (!entry) throw new Error(`Missing legal document: ${locale}/${type}`);
+const { Content } = await render(entry);
+const currentPath = `/${type}`;
+---
+
+<BaseLayout
+  title={`${entry.data.title} — ${APP.name}`}
+  description={entry.data.title}
+  locale={locale}
+  currentPath={currentPath}
+>
+  <div data-embed-hide><Nav locale={locale} currentPath={currentPath} /></div>
+
+  <main id="main" tabindex="-1">
+    <article class="bg-bg-primary px-4 pt-10 pb-16 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl">
+        <p class="text-sm text-text-secondary">
+          {t(tr, 'legal.lastUpdated')}: {entry.data.lastUpdated}
+        </p>
+        <div class="legal-prose mt-6">
+          <Content />
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <div data-embed-hide><Footer locale={locale} currentPath={currentPath} /></div>
+</BaseLayout>

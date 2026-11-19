@@ -1,0 +1,77 @@
+---
+import { Image } from 'astro:assets';
+import AppIcon from '../assets/app-icon.png';
+import { getTranslations, t, tList } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale as Locale);
+const labels = tList<string>(tr, 'hero.mockLabels');
+const minutes = [45, 60, 25, 15];
+const unit = t(tr, 'common.minutesUnit');
+
+function band(min: number): string {
+  if (min <= 20) return 'bg-success/10 text-success';
+  if (min <= 45) return 'bg-warning/10 text-warning';
+  return 'bg-danger/10 text-danger';
+}
+---
+
+<div
+  class="relative flex w-[168px] flex-col overflow-hidden rounded-[2rem] border-2 border-primary-light bg-bg-surface sm:w-[190px]"
+  style="box-shadow: 0 24px 60px rgba(0, 32, 91, 0.28), 0 4px 12px rgba(0,0,0,0.08); aspect-ratio: 9/19.5;"
+>
+  <div class="flex shrink-0 justify-center pt-3 pb-1">
+    <div class="h-[10px] w-[56px] rounded-full bg-text-primary opacity-80"></div>
+  </div>
+
+  <div class="flex flex-1 flex-col gap-2 px-3 pb-4">
+    <div class="flex items-center gap-2">
+      <div class="h-8 w-8 shrink-0 overflow-hidden rounded-lg shadow-sm" aria-hidden="true">
+        <Image
+          src={AppIcon}
+          alt=""
+          width={80}
+          height={80}
+          class="h-full w-full object-cover"
+        />
+      </div>
+      <div class="min-w-0">
+        <p class="truncate text-[10px] leading-tight font-semibold text-text-primary sm:text-[11px]">
+          {t(tr, 'hero.mockPark')}
+        </p>
+        <p class="flex items-center gap-1 text-[9px] text-text-secondary sm:text-[10px]">
+          <span class="inline-block h-1.5 w-1.5 rounded-full bg-success"></span>
+          {t(tr, 'hero.mockLive')}
+        </p>
+      </div>
+    </div>
+
+    <div class="w-full space-y-1.5">
+      {minutes.map((min, i) => (
+        <div class="flex items-center justify-between gap-2 rounded-lg bg-bg-muted px-2.5 py-2">
+          <span class="max-w-[92px] truncate text-[10px] text-text-secondary sm:max-w-[104px] sm:text-[11px]">
+            {labels[i]}
+          </span>
+          <span class:list={['whitespace-nowrap rounded-full px-1.5 py-0.5 text-[10px] font-bold sm:text-[11px]', band(min)]}>
+            {min}{unit}
+          </span>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-auto rounded-lg border border-border-subtle bg-bg-surface px-2.5 py-2">
+      <p class="text-[9px] leading-snug text-text-secondary sm:text-[10px]">
+        {t(tr, 'hero.mockNote')}
+      </p>
+    </div>
+  </div>
+
+  <div class="flex shrink-0 justify-center pb-2">
+    <div class="h-1 w-10 rounded-full bg-text-secondary opacity-40"></div>
+  </div>
+</div>

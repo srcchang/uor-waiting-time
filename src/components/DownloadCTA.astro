@@ -1,0 +1,57 @@
+---
+import { appStoreUrl, playStoreUrl } from '../config/app';
+import { base } from '../utils/base';
+import { getTranslations, t } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale as Locale);
+
+const stores = [
+  ...(appStoreUrl
+    ? [
+        {
+          href: appStoreUrl,
+          label: t(tr, 'common.a11y.appStoreLink'),
+          img: `${base}images/app-store-badge.svg`,
+          alt: 'Download on the App Store',
+          width: 144,
+          height: 48,
+        },
+      ]
+    : []),
+  {
+    href: playStoreUrl,
+    label: t(tr, 'common.a11y.googlePlayLink'),
+    img: `${base}images/google-play-badge.png`,
+    alt: 'Get it on Google Play',
+    width: 161,
+    height: 48,
+  },
+];
+---
+
+<div class="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+  {stores.map((store) => (
+    <a
+      href={store.href}
+      aria-label={store.label}
+      class="inline-flex h-12 items-center justify-center transition-transform hover:scale-[1.02] active:scale-95"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src={store.img}
+        alt={store.alt}
+        class="max-h-full w-auto max-w-full"
+        width={store.width}
+        height={store.height}
+        loading="lazy"
+      />
+    </a>
+  ))}
+</div>

@@ -1,0 +1,61 @@
+---
+import { parks } from '../data/parks';
+import { getTranslations, t } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+import Icon from './Icon.astro';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale as Locale);
+---
+
+<section
+  id="parks"
+  class="border-t border-border-subtle bg-bg-muted px-4 py-16 sm:px-6 lg:px-8"
+>
+  <div class="mx-auto max-w-5xl">
+    <div class="mb-10 text-center">
+      <h2 class="text-2xl font-bold text-text-primary sm:text-3xl">
+        {t(tr, 'parks.sectionTitle')}
+      </h2>
+      <p class="mt-3 text-text-secondary">
+        {t(tr, 'parks.sectionSubtitle')}
+      </p>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2">
+      {parks.map((park, i) => (
+        <div
+          class="group relative overflow-hidden rounded-2xl border border-border-subtle bg-bg-surface p-5 transition-shadow hover:shadow-lg"
+          data-reveal
+          data-reveal-delay={i * 60}
+        >
+          <div
+            class="absolute inset-x-0 top-0 h-1"
+            style={`background: linear-gradient(90deg, ${park.color}, ${park.accent});`}
+          >
+          </div>
+          <div class="flex items-start gap-4">
+            <div
+              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-white shadow-sm"
+              style={`background: linear-gradient(135deg, ${park.color}, ${park.accent});`}
+            >
+              <Icon name={park.icon} size="24" />
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-text-primary">
+                {t(tr, `parks.${park.id}.name`)}
+              </h3>
+              <p class="mt-1.5 text-sm leading-relaxed text-text-secondary">
+                {t(tr, `parks.${park.id}.description`)}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

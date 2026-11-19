@@ -1,0 +1,86 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Nav from './Nav.astro';
+import Hero from './Hero.astro';
+import TrustIndicators from './TrustIndicators.astro';
+import FeatureSection from './FeatureSection.astro';
+import Parks from './Parks.astro';
+import FAQ from './FAQ.astro';
+import BrandCTA from './BrandCTA.astro';
+import Footer from './Footer.astro';
+import { APP, appStoreUrl, playStoreUrl } from '../config/app';
+import { getTranslations, t, tList } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale as Locale);
+
+const featureItems = tList<{
+  icon: string;
+  title: string;
+  description: string;
+}>(tr, 'features.items');
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': ['SoftwareApplication', 'MobileApplication'],
+  name: APP.name,
+  operatingSystem: 'iOS, Android',
+  applicationCategory: 'TravelApplication',
+  description: t(tr, 'meta.homeDescription'),
+  inLanguage: ['en', 'ja', 'ko', 'zh-Hant', 'zh-Hans'],
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  url: appStoreUrl ?? playStoreUrl,
+  installUrl: playStoreUrl,
+  downloadUrl: [playStoreUrl, ...(appStoreUrl ? [appStoreUrl] : [])],
+};
+---
+
+<BaseLayout
+  title={t(tr, 'meta.homeTitle')}
+  description={t(tr, 'meta.homeDescription')}
+  locale={locale}
+  currentPath="/"
+  jsonLd={jsonLd}
+>
+  <div data-embed-hide><Nav locale={locale} currentPath="/" /></div>
+  <main id="main" tabindex="-1">
+    <Hero locale={locale} />
+    <TrustIndicators locale={locale} />
+
+    <section
+      id="features"
+      class="border-t border-border-subtle bg-bg-surface px-4 py-16 sm:px-6 lg:px-8"
+    >
+      <div class="mx-auto max-w-4xl">
+        <div class="mb-12 text-center">
+          <h2 class="text-2xl font-bold text-text-primary sm:text-3xl">
+            {t(tr, 'features.sectionTitle')}
+          </h2>
+          <p class="mt-3 text-text-secondary">
+            {t(tr, 'features.sectionSubtitle')}
+          </p>
+        </div>
+        <div class="space-y-14">
+          {featureItems.map((item, i) => (
+            <FeatureSection
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
+              reversed={i % 2 !== 0}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <Parks locale={locale} />
+    <FAQ locale={locale} limit={5} />
+    <BrandCTA locale={locale} />
+  </main>
+  <div data-embed-hide><Footer locale={locale} currentPath="/" /></div>
+</BaseLayout>
