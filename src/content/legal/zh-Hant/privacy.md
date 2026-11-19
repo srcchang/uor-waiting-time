@@ -31,7 +31,7 @@ lastUpdated: 2026年11月19日
 
 ## 3. Firebase 與 Google 服務
 
-本 App 使用 Firebase（Google LLC），包括匿名驗證、Cloud Firestore（內容與等候時間資料）、Cloud Storage（圖片與內容檔案）、Remote Config（功能開關與更新門檻）、Analytics（彙總事件）與 Crashlytics（當機報告）。Google 的處理適用其隱私權政策：<https://policies.google.com/privacy>。
+本 App 使用 Firebase（Google LLC），包括匿名驗證、Cloud Firestore（內容與等候時間資料）、Cloud Storage（圖片與內容檔案）、Remote Config（功能開關與更新門檻）、Analytics（彙總事件）與 Crashlytics（當機報告）。Google 的處理適用其隱私權政策。
 
 ## 4. 廣告
 
@@ -77,7 +77,7 @@ lastUpdated: 2026年11月19日
 
 ## 12. 本網站
 
-本網站託管於 GitHub Pages。GitHub 可能會處理 IP 位址與請求記錄等技術資訊，以提供網站並保護其服務。本網站不使用分析 Cookie 或廣告追蹤器。請參閱 GitHub 的隱私權聲明：<https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement>。
+本網站託管於 GitHub Pages。GitHub 可能會處理 IP 位址與請求記錄等技術資訊，以提供網站並保護其服務。本網站不使用分析 Cookie 或廣告追蹤器。請參閱 GitHub 的隱私權聲明。
 
 ## 13. 變更
 

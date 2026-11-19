@@ -31,7 +31,7 @@ lastUpdated: 2026年11月19日
 
 ## 3. Firebase と Google のサービス
 
-本アプリは Firebase（Google LLC）を利用しています。匿名認証、Cloud Firestore（コンテンツと待ち時間データ）、Cloud Storage（画像・コンテンツファイル）、Remote Config（機能フラグとアップデート基準）、Analytics（集計イベント）、Crashlytics（クラッシュレポート）です。Google による処理には Google のプライバシーポリシーが適用されます: <https://policies.google.com/privacy>。
+本アプリは Firebase（Google LLC）を利用しています。匿名認証、Cloud Firestore（コンテンツと待ち時間データ）、Cloud Storage（画像・コンテンツファイル）、Remote Config（機能フラグとアップデート基準）、Analytics（集計イベント）、Crashlytics（クラッシュレポート）です。Google による処理には Google のプライバシーポリシーが適用されます。
 
 ## 4. 広告
 
@@ -77,7 +77,7 @@ HTTPS による暗号化通信やアクセス制御など、合理的な技術�
 
 ## 12. 本ウェブサイト
 
-本ウェブサイトは GitHub Pages でホストされています。GitHub は、サイトの配信とサービスの保護のため、IP アドレスやリクエストログなどの技術情報を処理することがあります。本ウェブサイトは Analytics Cookie や広告トラッカーを使用していません。GitHub のプライバシーステートメントをご確認ください: <https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement>。
+本ウェブサイトは GitHub Pages でホストされています。GitHub は、サイトの配信とサービスの保護のため、IP アドレスやリクエストログなどの技術情報を処理することがあります。本ウェブサイトは Analytics Cookie や広告トラッカーを使用していません。GitHub のプライバシーステートメントをご確認ください。
 
 ## 13. 変更
 

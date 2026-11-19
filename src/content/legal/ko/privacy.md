@@ -31,7 +31,7 @@ lastUpdated: 2026년 11월 19일
 
 ## 3. Firebase 및 Google 서비스
 
-본 앱은 Firebase(Google LLC)를 사용합니다. 익명 인증, Cloud Firestore(콘텐츠 및 대기 시간 데이터), Cloud Storage(이미지 및 콘텐츠 파일), Remote Config(기능 플래그 및 업데이트 기준), Analytics(집계 이벤트), Crashlytics(비정상 종료 보고서)입니다. Google의 처리에는 Google 개인정보처리방침이 적용됩니다: <https://policies.google.com/privacy>.
+본 앱은 Firebase(Google LLC)를 사용합니다. 익명 인증, Cloud Firestore(콘텐츠 및 대기 시간 데이터), Cloud Storage(이미지 및 콘텐츠 파일), Remote Config(기능 플래그 및 업데이트 기준), Analytics(집계 이벤트), Crashlytics(비정상 종료 보고서)입니다. Google의 처리에는 Google 개인정보처리방침이 적용됩니다.
 
 ## 4. 광고
 
@@ -77,7 +77,7 @@ HTTPS 암호화 연결과 접근 제어 등 합리적인 기술적·조직적 �
 
 ## 12. 본 웹사이트
 
-본 웹사이트는 GitHub Pages에서 호스팅됩니다. GitHub는 사이트 제공과 서비스 보호를 위해 IP 주소 및 요청 로그 같은 기술 정보를 처리할 수 있습니다. 본 웹사이트는 분석 쿠키나 광고 추적기를 사용하지 않습니다. GitHub 개인정보처리방침을 참고하세요: <https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement>.
+본 웹사이트는 GitHub Pages에서 호스팅됩니다. GitHub는 사이트 제공과 서비스 보호를 위해 IP 주소 및 요청 로그 같은 기술 정보를 처리할 수 있습니다. 본 웹사이트는 분석 쿠키나 광고 추적기를 사용하지 않습니다. GitHub 개인정보처리방침을 참고하세요.
 
 ## 13. 변경
 

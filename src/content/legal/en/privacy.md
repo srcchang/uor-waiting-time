@@ -31,7 +31,7 @@ The app and its service providers may process:
 
 ## 3. Firebase and Google services
 
-The app uses Firebase (Google LLC) for anonymous authentication, Cloud Firestore (content and wait-time data), Cloud Storage (images and content files), Remote Config (feature flags and update thresholds), Analytics (aggregate usage events), and Crashlytics (crash reports). Google's privacy policy applies to its processing: <https://policies.google.com/privacy>.
+The app uses Firebase (Google LLC) for anonymous authentication, Cloud Firestore (content and wait-time data), Cloud Storage (images and content files), Remote Config (feature flags and update thresholds), Analytics (aggregate usage events), and Crashlytics (crash reports). Google's privacy policy applies to its processing.
 
 ## 4. Advertising
 
@@ -77,7 +77,7 @@ We use reasonable technical and organizational measures, including encrypted con
 
 ## 12. This website
 
-This website is hosted on GitHub Pages. GitHub may process technical information such as IP addresses and request logs to serve the site and protect its service. The website does not use analytics cookies or advertising trackers. See GitHub's privacy statement: <https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement>.
+This website is hosted on GitHub Pages. GitHub may process technical information such as IP addresses and request logs to serve the site and protect its service. The website does not use analytics cookies or advertising trackers. See GitHub's privacy statement.
 
 ## 13. Changes
 
